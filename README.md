@@ -34,14 +34,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-unary-loop-interchange-order
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import unaryLoopOrder from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-loop-interchange-order@esm/index.mjs';
+var unaryLoopOrder = require( '@stdlib/ndarray-base-unary-loop-interchange-order' );
 ```
 
 #### unaryLoopOrder( shape, stridesX, stridesY )
@@ -83,7 +99,7 @@ For all returned arrays, the first element corresponds to the innermost loop, an
 
 -   When iterating over the elements of a multi-dimensional array, accessing elements which are closer in memory can improve performance. To this end, [loop interchange][loop-interchange] is a technique used in [loop nest optimization][loop-nest-optimization] to improve locality of reference and take advantage of CPU cache.
 
-    The purpose of this function is to order [ndarray][@stdlib/ndarray/ctor] dimensions according to the magnitude of **input array** strides. By using the ordered dimensions and associated strides, one can construct nested loops (one for each dimension) such that the innermost loop iterates over the dimension in which array elements are closest in memory and the outermost loop iterates over the dimension in which array elements are farthest apart in memory. As a consequence, element iteration is optimized to minimized cache misses and ensure locality of reference.
+    The purpose of this function is to order [ndarray][@stdlib/ndarray/ctor] dimensions according to the magnitude of **input array** strides. By using the ordered dimensions and associated strides, one can construct nested loops (one for each dimension) such that the innermost loop iterates over the dimension in which array elements are closest in memory and the outermost loop iterates over the dimension in which array elements are farthest apart in memory. As a consequence, element iteration is optimized to minimize cache misses and ensure locality of reference.
 
 -   Cache performance may be degraded if the layout order (i.e., row-major or column-major) differs for the input and output [ndarrays][@stdlib/ndarray/ctor]. This function is intended to optimize cache performance for the input [ndarray][@stdlib/ndarray/ctor]. If the output [ndarray][@stdlib/ndarray/ctor] has a different layout order (e.g., if the input [ndarray][@stdlib/ndarray/ctor] is row-major and the output [ndarray][@stdlib/ndarray/ctor] is column-major), cache misses are likely for the output [ndarray][@stdlib/ndarray/ctor]. In general, to ensure best performance, input and output [ndarrays][@stdlib/ndarray/ctor] should have the same layout order.
 
@@ -101,14 +117,9 @@ For all returned arrays, the first element corresponds to the innermost loop, an
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
-import loopOrder from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-loop-interchange-order@esm/index.mjs';
+```javascript
+var array = require( '@stdlib/ndarray-array' );
+var loopOrder = require( '@stdlib/ndarray-base-unary-loop-interchange-order' );
 
 // Create ndarrays:
 var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
@@ -119,10 +130,6 @@ var o = loopOrder( x.shape, x.strides, y.strides );
 // returns {...}
 
 console.log( o );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -154,7 +161,7 @@ console.log( o );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -218,7 +225,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [loop-nest-optimization]: https://en.wikipedia.org/wiki/Loop_nest_optimization
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/stdlib/tree/esm
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/stdlib
 
 </section>
 
