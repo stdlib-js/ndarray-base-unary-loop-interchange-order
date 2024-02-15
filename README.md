@@ -54,6 +54,11 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
+unaryLoopOrder = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-loop-interchange-order@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-base-unary-loop-interchange-order/tags). For example,
+
+```javascript
 unaryLoopOrder = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-loop-interchange-order@v0.2.0-umd/browser.js' )
 ```
 
@@ -66,7 +71,7 @@ var unaryLoopOrder = require( 'path/to/vendor/umd/ndarray-base-unary-loop-interc
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-loop-interchange-order@v0.2.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-loop-interchange-order@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -141,7 +146,7 @@ For all returned arrays, the first element corresponds to the innermost loop, an
 <html lang="en">
 <body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-loop-interchange-order@v0.2.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-loop-interchange-order@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
