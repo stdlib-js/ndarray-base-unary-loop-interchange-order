@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-07)
+## Unreleased (2025-05-12)
 
 <section class="features">
 
@@ -22,6 +22,8 @@
 
 <details>
 
+-   [`603ba97`](https://github.com/stdlib-js/stdlib/commit/603ba974c88f33cb73ba53c69435183ca535ded9) - **docs:** fix parameter names _(by Athan Reines)_
+-   [`d8fe0d8`](https://github.com/stdlib-js/stdlib/commit/d8fe0d87591079990591bd5727abdabaa81cd265) - **bench:** update value generation and update examples _(by Athan Reines)_
 -   [`3dd8cb3`](https://github.com/stdlib-js/stdlib/commit/3dd8cb379ea22c4a92d610d146cdd662d3187e27) - **chore:** minor clean-up _(by Philipp Burckhardt)_
 -   [`0d360b3`](https://github.com/stdlib-js/stdlib/commit/0d360b33eba8019d2d638f265986d861ed22642a) - **feat:** return index array as part of the results object _(by Athan Reines)_
 
