@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/ndarray-base-unary-loop-interchange-order",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Reorder ndarray dimensions and associated strides for loop interchange.",
   "license": "Apache-2.0",
   "author": {
@@ -89,7 +89,6 @@
     "utils",
     "util"
   ],
-  "__stdlib__": {},
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stdlib"
